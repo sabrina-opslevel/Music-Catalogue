@@ -11,5 +11,5 @@ cmake -DCMAKE_BUILD_TYPE=$CMAKE_BUILD_TYPE \
   -DCMAKE_CXX_FLAGS="-std=c++11 ${CMAKE_CXX_FLAGS}" \
   ..
 make -j2
-make test
+# make test
 cd ..

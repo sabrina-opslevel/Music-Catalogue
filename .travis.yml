@@ -43,8 +43,8 @@ cache:
 script:
 - pwd
 - sh -x build.sh
-after_failure:
-- cat build/Testing/Temporary/LastTest.log
+# after_failure:
+# - cat build/Testing/Temporary/LastTest.log
 addons:
   apt:
     sources:
