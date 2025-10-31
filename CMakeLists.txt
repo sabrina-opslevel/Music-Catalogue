@@ -8,7 +8,7 @@ cmake_minimum_required(VERSION 2.8)
 project(CPP-NETLIB)
 
 option( CPP-NETLIB_BUILD_SHARED_LIBS "Build cpp-netlib as shared libraries." OFF )
-option( CPP-NETLIB_BUILD_TESTS "Build the cpp-netlib project tests." ON)
+option( CPP-NETLIB_BUILD_TESTS "Build the cpp-netlib project tests." OFF)
 # option( CPP-NETLIB_BUILD_EXPERIMENTS "Build the cpp-netlib project experiments." ON)
 option( CPP-NETLIB_BUILD_EXAMPLES "Build the cpp-netlib project examples." ON)
 option( CPP-NETLIB_ENABLE_HTTPS "Build cpp-netlib with support for https if OpenSSL is found." ON)
@@ -97,7 +97,9 @@ if (Boost_FOUND)
     add_definitions(-DASIO_HEADER_ONLY)
     include_directories(deps/asio/asio/include)
 
-    enable_testing()
+    if (CPP-NETLIB_BUILD_TESTS)
+      enable_testing()
+    endif (CPP-NETLIB_BUILD_TESTS)
     add_subdirectory(libs/network/src)
     if (CPP-NETLIB_BUILD_TESTS)
       add_subdirectory(deps/googletest)
@@ -118,7 +120,8 @@ if (MSVC)
     set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} /bigobj")
 endif()
 
-enable_testing()
+# Testing disabled
+# enable_testing()
 
 install(DIRECTORY boost DESTINATION ${CMAKE_INSTALL_INCLUDEDIR})
 
