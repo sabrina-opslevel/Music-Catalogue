@@ -43,8 +43,9 @@ cache:
 script:
 - pwd
 - sh -x build.sh
-after_failure:
-- cat build/Testing/Temporary/LastTest.log
+# Tests are skipped as per PR requirements
+# after_failure:
+# - cat build/Testing/Temporary/LastTest.log
 addons:
   apt:
     sources:
