@@ -11,15 +11,24 @@
   World!".
  */
 #include <boost/network/protocol/http/client.hpp>
+#include <boost/network/greeting.hpp>
 #include <iostream>
+#include <string>
 
 namespace http = boost::network::http;
 
 int main(int argc, char *argv[]) {
 
   if (argc != 2) {
-    std::cerr << "Usage: " << argv[0] << " url" << std::endl;
+    std::cerr << "Usage: " << argv[0] << " <url|--say-hi>" << std::endl;
     return 1;
+  }
+
+  // Check for --say-hi flag
+  std::string arg1 = argv[1];
+  if (arg1 == "--say-hi") {
+    boost::network::sayHi();
+    return 0;
   }
 
   try {

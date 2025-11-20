@@ -13,5 +13,6 @@
 
 #include <boost/network/message.hpp>   // message type implementation
 #include <boost/network/protocol.hpp>  // protocols implementation
+#include <boost/network/greeting.hpp>  // greeting functionality
 
 #endif  // BOOST_NETWORK_HPP__

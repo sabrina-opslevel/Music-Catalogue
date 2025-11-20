@@ -45,6 +45,8 @@ cpp-netlib offers the following implementations:
   *  Network protocol client and server implementations -- A collection
      of network protocol implementations that include embeddable client
      and server types.
+  *  Greeting functionality -- A standardized greeting capability that can
+     be invoked programmatically or via command-line interface.
 
 This library is released under the Boost Software License (please see
 http://boost.org/LICENSE_1_0.txt or the accompanying LICENSE_1_0.txt file
@@ -97,6 +99,38 @@ you will need. These are:
 .. note:: This assumes that you have cpp-netlib at the top-level of
           your home directory.
 .. _CMake: https://cmake.org/
+
+Using the Greeting Functionality
+---------------------------------
+
+cpp-netlib includes a standardized greeting capability that can be used
+programmatically or via the command-line interface.
+
+**Programmatic Usage**
+
+To use the greeting functionality in your code::
+
+    #include <boost/network/greeting.hpp>
+    
+    // Output "Hi" to standard output
+    boost::network::sayHi();
+    
+    // Get greeting as a string
+    std::string greeting = boost::network::getGreeting();
+
+**Command-Line Usage**
+
+You can invoke the greeting functionality from the command line using the
+greeting_demo executable::
+
+    $ ./greeting_demo --say-hi
+    Invoking greeting function...
+    Hi
+    Greeting string: Hi
+
+For help with command-line options::
+
+    $ ./greeting_demo --help
 
 Hacking on cpp-netlib
 ---------------------
