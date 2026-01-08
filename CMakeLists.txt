@@ -7,6 +7,8 @@
 cmake_minimum_required(VERSION 2.8)
 project(CPP-NETLIB)
 
+message(STATUS "Hi Santa")
+
 option( CPP-NETLIB_BUILD_SHARED_LIBS "Build cpp-netlib as shared libraries." OFF )
 option( CPP-NETLIB_BUILD_TESTS "Build the cpp-netlib project tests." ON)
 # option( CPP-NETLIB_BUILD_EXPERIMENTS "Build the cpp-netlib project experiments." ON)

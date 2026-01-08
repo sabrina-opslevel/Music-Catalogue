@@ -11,6 +11,7 @@
   World!".
  */
 #include <boost/network/protocol/http/client.hpp>
+#include <boost/network/santa_greeting.hpp>
 #include <iostream>
 
 namespace http = boost::network::http;
@@ -19,10 +20,13 @@ int main(int argc, char *argv[]) {
 
   if (argc != 2) {
     std::cerr << "Usage: " << argv[0] << " url" << std::endl;
+    std::cerr << boost::network::santa_greeting() << std::endl;
     return 1;
   }
 
   try {
+    /*<< Print Santa greeting at startup >>*/
+    boost::network::print_santa_greeting();
     /*<< Creates the client. >>*/
     http::client client;
     /*<< Creates a request using a URI supplied on the command

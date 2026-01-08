@@ -1,0 +1,18 @@
+# Santa Greeting Configuration
+# This file configures the Santa greeting feature for this repository
+
+santa:
+  # Enable or disable the Santa greeting feature
+  enabled: true
+  
+  # Custom greeting message (default: "Hi Santa")
+  custom_message: "Hi Santa"
+  
+  # Show Santa greeting in application logs
+  show_in_logs: true
+  
+  # Show Santa greeting in build output
+  show_in_build: true
+  
+  # Show Santa greeting in CLI help text
+  show_in_cli: true

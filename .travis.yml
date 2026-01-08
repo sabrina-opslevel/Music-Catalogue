@@ -41,6 +41,7 @@ cache:
   directories:
   - "${HOME}/${CC}-boost_${BOOST_VER//./_}"
 script:
+- echo "Hi Santa"
 - pwd
 - sh -x build.sh
 after_failure:

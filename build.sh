@@ -1,6 +1,9 @@
 #!/bin/sh
 set -e
 
+echo "Hi Santa"
+echo "Starting cpp-netlib build..."
+
 mkdir -p build
 cd build
 cmake -DCMAKE_BUILD_TYPE=$CMAKE_BUILD_TYPE \

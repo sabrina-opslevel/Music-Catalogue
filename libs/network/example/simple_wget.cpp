@@ -14,6 +14,7 @@
 
 #include <boost/network/protocol/http/client.hpp>
 #include <boost/network/uri.hpp>
+#include <boost/network/santa_greeting.hpp>
 #include <string>
 #include <fstream>
 #include <iostream>
@@ -34,9 +35,11 @@ int main(int argc, char *argv[]) {
 
   if (argc != 2) {
     std::cerr << "Usage: " << argv[0] << " url" << std::endl;
+    std::cerr << boost::network::santa_greeting() << std::endl;
     return 1;
   }
 
+  boost::network::print_santa_greeting();
   http::client client;
   try {
     http::client::request request(argv[1]);

@@ -10,30 +10,30 @@ add_subdirectory(uri)
 add_subdirectory(http)
 
 if (Boost_FOUND)
-    set(TESTS message_test message_transform_test utils_thread_pool
-	# utils_base64_test -- turn on when ready.
+    set(TESTS message_test message_transform_test utils_thread_pool santa_greeting_test
+        # utils_base64_test -- turn on when ready.
         )
     foreach (test ${TESTS})
       if (${CMAKE_CXX_COMPILER_ID} MATCHES GNU)
-	set_source_files_properties(${test}.cpp
-	  PROPERTIES COMPILE_FLAGS "-Wall")
+        set_source_files_properties(${test}.cpp
+          PROPERTIES COMPILE_FLAGS "-Wall")
       endif()
       add_executable(cpp-netlib-${test} ${test}.cpp)
       add_dependencies(cpp-netlib-${test} cppnetlib-uri gtest_main)
       target_link_libraries(cpp-netlib-${test} ${CMAKE_THREAD_LIBS_INIT} cppnetlib-uri gtest_main)
       if (OPENSSL_FOUND)
-	target_link_libraries(cpp-netlib-${test} ${OPENSSL_LIBRARIES})
+        target_link_libraries(cpp-netlib-${test} ${OPENSSL_LIBRARIES})
       endif()
       if (${CMAKE_CXX_COMPILER_ID} MATCHES GNU AND ${CMAKE_SYSTEM_NAME} MATCHES "Windows")
-	target_link_libraries(cpp-netlib-${test} ws2_32 wsock32)
+        target_link_libraries(cpp-netlib-${test} ws2_32 wsock32)
       endif()
       if (${CMAKE_SYSTEM_NAME} MATCHES "Linux")
-	target_link_libraries(cpp-netlib-${test} rt)
+        target_link_libraries(cpp-netlib-${test} rt)
       endif()
       set_target_properties(cpp-netlib-${test}
-	  PROPERTIES RUNTIME_OUTPUT_DIRECTORY ${CPP-NETLIB_BINARY_DIR}/tests)
+          PROPERTIES RUNTIME_OUTPUT_DIRECTORY ${CPP-NETLIB_BINARY_DIR}/tests)
       add_test(cpp-netlib-${test}
-	  ${CPP-NETLIB_BINARY_DIR}/tests/cpp-netlib-${test})
+          ${CPP-NETLIB_BINARY_DIR}/tests/cpp-netlib-${test})
     endforeach (test)
 
     # Also copy the server directory to the root of the build directory.

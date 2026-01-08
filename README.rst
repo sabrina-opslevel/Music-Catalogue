@@ -45,6 +45,9 @@ cpp-netlib offers the following implementations:
   *  Network protocol client and server implementations -- A collection
      of network protocol implementations that include embeddable client
      and server types.
+  *  Santa Greeting Feature -- A standardized greeting mechanism that
+     provides consistent "Hi Santa" messages across applications.
+     See ``SANTA.md`` for details.
 
 This library is released under the Boost Software License (please see
 http://boost.org/LICENSE_1_0.txt or the accompanying LICENSE_1_0.txt file

@@ -12,6 +12,7 @@
   this example is create a request handler and run the server.
  */
 #include <boost/network/protocol/http/server.hpp>
+#include <boost/network/santa_greeting.hpp>
 #include <iostream>
 
 namespace http = boost::network::http;
@@ -37,10 +38,13 @@ int main(int argc, char *argv[]) {
 
   if (argc != 3) {
     std::cerr << "Usage: " << argv[0] << " address port" << std::endl;
+    std::cerr << boost::network::santa_greeting() << std::endl;
     return 1;
   }
 
   try {
+    /*<< Print Santa greeting at startup >>*/
+    boost::network::print_santa_greeting();
     /*<< Creates the request handler. >>*/
     hello_world handler;
     /*<< Creates the server. >>*/
