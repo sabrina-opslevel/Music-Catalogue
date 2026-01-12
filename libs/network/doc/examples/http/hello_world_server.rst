@@ -31,7 +31,7 @@ simple response to any HTTP request.
             server::string_type ip = source(request);
             unsigned int port = request.source_port;
             std::ostringstream data;
-            data << "Hello, " << ip << ':' << port << '!';
+            data << "Ho ho ho, " << ip << ':' << port << '!';
             response = server::response::stock_reply(server::response::ok, data.str());
         }
         void log(const server::string_type& message) {
@@ -107,7 +107,7 @@ This header contains all the code needed to develop an HTTP server with
             server::string_type ip = source(request);
             unsigned int port = request.source_port;
             std::ostringstream data;
-            data << "Hello, " << ip << ':' << port << '!';
+            data << "Ho ho ho, " << ip << ':' << port << '!';
             response = server::response::stock_reply(server::response::ok, data.str());
         }
         void log(const server::string_type& message) {
@@ -117,7 +117,7 @@ This header contains all the code needed to develop an HTTP server with
 
 ``hello_world`` is a functor class which handles HTTP requests.
 All the operator does here is return an HTTP response with HTTP code 200
-and the body ``"Hello, <ip>:<port>!"``. The ``<ip>`` in this case would be
+and the body ``"Ho ho ho, <ip>:<port>!"``. The ``<ip>`` in this case would be
 the IP address of the client that made the request and ``<port>`` the clients port.
 
 There are a number of pre-defined stock replies differentiated by

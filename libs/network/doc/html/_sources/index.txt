@@ -2,7 +2,7 @@
 .. rubric:: Straightforward network programming in modern C++
 
 .. :Authors: Glyn Matthews <glyn.matthews@gmail.com>
-.. 	  Dean Michael Berris <dberris@google.com>
+..        Dean Michael Berris <dberris@google.com>
 .. :Date: 2014-10-01
 .. :Version: 0.11.0
 .. :Description: Complete user documentation, with examples, for the :mod:`cpp-netlib`.
@@ -85,7 +85,7 @@ And the corresponding server code is listed below:
         void operator() (http_server::request const &request,
                          http_server::response &response) {
             response = http_server::response::stock_reply(
-                http_server::response::ok, "Hello, world!");
+                http_server::response::ok, "Ho ho ho!");
         }
 
         void log(http_server::string_type const &info) {
@@ -112,10 +112,10 @@ Want to learn more?
     * :ref:`Full table of contents <contents>`
 
 .. warning:: Be aware that not all features are stable.  The generic
-   	     message design is under review and the URI and HTTP
-   	     client implementation will continue to undergo
-   	     refactoring.  Future versions will include support for
-   	     other network protocols.
+             message design is under review and the URI and HTTP
+             client implementation will continue to undergo
+             refactoring.  Future versions will include support for
+             other network protocols.
 
 
 .. _Boost: http://www.boost.org/

@@ -31,7 +31,7 @@ simple response to any HTTP request.
             server::string_type ip = source(request);
             unsigned int port = request.source_port;
             std::ostringstream data;
-            data << "Hello, " << ip << ':' << port << '!';
+            data << "Ho ho ho, " << ip << ':' << port << '!';
             response = server::response::stock_reply(server::response::ok, data.str());
         }
         void log(const server::string_type& message) {
@@ -107,7 +107,7 @@ This header contains all the code needed to develop an HTTP server with
             server::string_type ip = source(request);
             unsigned int port = request.source_port;
             std::ostringstream data;
-            data << "Hello, " << ip << ':' << port << '!';
+            data << "Ho ho ho, " << ip << ':' << port << '!';
             response = server::response::stock_reply(server::response::ok, data.str());
         }
         void log(const server::string_type& message) {

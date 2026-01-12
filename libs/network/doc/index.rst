@@ -85,7 +85,7 @@ And the corresponding server code is listed below:
         void operator() (http_server::request const &request,
                          http_server::response &response) {
             response = http_server::response::stock_reply(
-                http_server::response::ok, "Hello, world!");
+                http_server::response::ok, "Ho ho ho!");
         }
 
         void log(http_server::string_type const &info) {

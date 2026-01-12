@@ -28,7 +28,7 @@ except:
 
 status = 0
 client = httplib.Http(timeout=5)
-expected = b'Hello, World!'
+expected = b'Ho ho ho!'
 
 def test(url, method, expected, headers={}, body=''):
     global status 

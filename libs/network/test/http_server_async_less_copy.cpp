@@ -50,11 +50,11 @@ struct async_hello_world {
           return;
         }
       }
-      static char const* hello_world = "Hello, World!";
+      static char const* hello_world = "Ho ho ho!";
       connection->set_status(server::connection::ok);
       connection->set_headers(boost::make_iterator_range(headers, headers + 3));
       std::vector<asio::const_buffer> iovec;
-      iovec.push_back(asio::const_buffer(hello_world, 13));
+      iovec.push_back(asio::const_buffer(hello_world, 9));
       connection->write(iovec, [this] (std::error_code const &ec) { error(ec); });
     }
   }

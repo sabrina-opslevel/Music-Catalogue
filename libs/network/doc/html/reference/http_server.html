@@ -717,7 +717,7 @@ http_server server(options.address(&quot;localhost&quot;).port(&quot;8000&quot;)
 <dd><p>Writes a given range of bytes out in order.</p>
 <p>Even though this function looks synchronous, all it does is schedules asynchronous writes to the connection as soon as the range is serialised into appropriately sized buffers.</p>
 <p>To use in your handler, it would look like:</p>
-<p>Example: <div class="highlight-python"><div class="highlight"><pre><span></span>connection-&gt;write(&quot;Hello, world!\n&quot;);
+<p>Example: <div class="highlight-python"><div class="highlight"><pre><span></span>connection-&gt;write(&quot;Ho ho ho!\n&quot;);
 std::string sample = &quot;I have a string!&quot;;
 connection-&gt;write(sample);
 </pre></div>

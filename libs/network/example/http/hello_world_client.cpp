@@ -7,8 +7,8 @@
 /*`
   This is a part of the 'Hello World' example.  We create a client
   object and make a single HTTP request.  If we use make this request
-  to the `hello_world_server`, then the output is simply "Hello,
-  World!".
+  to the `hello_world_server`, then the output is simply "Ho ho ho,
+  [IP]:[PORT]!".
  */
 #include <boost/network/protocol/http/client.hpp>
 #include <iostream>

@@ -127,7 +127,7 @@ void process_request(work_queue& queue) {
       std::this_thread::sleep_for(std::chrono::seconds(10));
 
       request->conn->set_status(server::connection::ok);
-      request->conn->write("Hello, world!");
+      request->conn->write("Ho ho ho!");
     }
 
     std::this_thread::sleep_for(std::chrono::microseconds(1000));
