@@ -105,7 +105,7 @@ cpp-netlib uses git_ for tracking work, and is hosted on GitHub_.
 cpp-netlib is hosted on GitHub_ following the GitHub recommended practice of
 forking the repository and submitting pull requests to the source repository.
 You can read more about the forking_ process and submitting `pull requests`_ if
-you're not familiar with either process yet. cpp-netib follows the GitHub pull
+you're not familiar with either process yet. cpp-netlib follows the GitHub pull
 request model for accepting patches. You can read more about the process at
 http://cpp-netlib.org/process.html#pull-requests. 
 

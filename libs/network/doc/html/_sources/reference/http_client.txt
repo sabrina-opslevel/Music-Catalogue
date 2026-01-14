@@ -175,7 +175,7 @@ and that there is an appropriately constructed response object named
 
     using namespace boost::network::http;  // parameters are here
     client client_();
-    client::request request_("http://cpp-netib.github.com/");
+    client::request request_("http://cpp-netlib.github.com/");
     client::response response_;
 
 
