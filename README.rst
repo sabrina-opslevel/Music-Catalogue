@@ -9,6 +9,11 @@ Modern C++ network programming libraries.
 .. image:: https://scan.coverity.com/projects/6714/badge.svg
     :target: https://scan.coverity.com/projects/cpp-netlib
 
+Hi!
+---
+
+Welcome to the C++ Network Library project!
+
 Join us on Slack: http://slack.cpp-netlib.org/
 
 Subscribe to the mailing list: https://groups.google.com/forum/#!forum/cpp-netlib
