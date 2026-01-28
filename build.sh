@@ -1,4 +1,5 @@
 #!/bin/sh
+# haha
 set -e
 
 mkdir -p build

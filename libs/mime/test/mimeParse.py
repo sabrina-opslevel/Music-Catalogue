@@ -1,4 +1,5 @@
 #!/usr/bin/python
+# haha
 #
 #	A python program to compare against the output from "mime-structure" tool.
 #

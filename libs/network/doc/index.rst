@@ -1,3 +1,4 @@
+<!-- haha -->
 .. _index:
 .. rubric:: Straightforward network programming in modern C++
 

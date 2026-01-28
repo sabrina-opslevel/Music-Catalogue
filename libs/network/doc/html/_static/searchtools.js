@@ -1,3 +1,4 @@
+// haha
 /*
  * searchtools.js_t
  * ~~~~~~~~~~~~~~~~

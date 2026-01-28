@@ -1,4 +1,5 @@
 #!/bin/sh
+# haha
 set -e
 
 if [ ! -d "${HOME}/${CC}-boost_${BOOST_VERSION}/include" ]; then

@@ -1,3 +1,4 @@
+<!-- haha -->
 .. _contents:
 
 Contents

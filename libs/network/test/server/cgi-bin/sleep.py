@@ -1,4 +1,5 @@
 #!/usr/bin/python
+# haha
 import os, sys, time
 
 if os.environ.has_key("QUERY_STRING") and os.environ["QUERY_STRING"].isdigit():
