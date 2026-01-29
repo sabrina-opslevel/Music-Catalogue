@@ -1,15 +1,15 @@
 #include <boost/config.hpp>
 #include <boost/network/utils/base64/encode.hpp>
 #include <boost/network/utils/base64/encode-io.hpp>
-#include "utils/base64-standalone.hpp"
+#include "utils/base64_standalone.hpp"
 // Since we're having issues with libc++ on OS X we're excluding this in the
 // meantime if we're using libc++
 #ifndef _LIBCPP_VERSION
-#include "utils/base64-stateless.hpp"
-#include "utils/base64-stateful_buffer.hpp"
+#include "utils/base64_stateless.hpp"
+#include "utils/base64_stateful_buffer.hpp"
 #endif
-#include "utils/base64-stateful_iterator.hpp"
-#include "utils/base64-stateful_transform.hpp"
+#include "utils/base64_stateful_iterator.hpp"
+#include "utils/base64_stateful_transform.hpp"
 #include <iostream>
 #include <iterator>
 #include <string>
@@ -61,7 +61,7 @@ using namespace boost::network::utils;
   }                                                                     \
   base64::encode_rest(result_encoder, rest)
 
-// testing the code from experimental/base64-stateless.hpp
+// testing the code from experimental/base64_stateless.hpp
 // NOTE(dberris): Only do this if we're NOT using libc++.
 #ifndef _LIBCPP_VERSION
 #define base64 base64_stateless
@@ -72,23 +72,23 @@ using namespace boost::network::utils;
 // and remembers the encoding state to be able to continue
 #define base64_with_state
 
-// testing the code from experimental/base64-stateful_buffer.hpp
+// testing the code from experimental/base64_stateful_buffer.hpp
 #define base64 base64_stateful_buffer
 #include "utils_base64_experiment.ipp"
 #undef base64
 #endif  // _LIBCPP_VERSION
 
-// testing the code from experimental/base64-stateful_transform.hpp
+// testing the code from experimental/base64_stateful_transform.hpp
 #define base64 base64_stateful_transform
 #include "utils_base64_experiment.ipp"
 #undef base64
 
-// testing the code from experimental/base64-stateful_iterator.hpp
+// testing the code from experimental/base64_stateful_iterator.hpp
 #define base64 base64_stateful_iterator
 #include "utils_base64_experiment.ipp"
 #undef base64
 
-// testing the code from experimental/base64-standalone.hpp,
+// testing the code from experimental/base64_standalone.hpp,
 // which has become the code in boost/network/utils/base64/encode.hpp
 #define base64 base64_standalone
 #include "utils_base64_experiment.ipp"

@@ -232,7 +232,7 @@ TYPED_TEST(HTTPClientTest, CGIMultiLineHeaderTest) {
   using namespace boost::network;
   using client = TypeParam;
 
-  typename client::request req(base_url + "/cgi-bin/multiline-header.py?query=1");
+  typename client::request req(base_url + "/cgi-bin/multiline_header.py?query=1");
   client c;
   typename client::response r;
   ASSERT_NO_THROW(r = c.get(req));

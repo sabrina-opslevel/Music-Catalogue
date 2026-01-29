@@ -1,8 +1,8 @@
 #!/usr/bin/python
 #
-#	A python program to compare against the output from "mime-structure" tool.
+#	A python program to compare against the output from "mime_structure" tool.
 #
-#	Usage: python mimeParse.py <file list>
+#	Usage: python mime_parse.py <file list>
 #
 
 import sys

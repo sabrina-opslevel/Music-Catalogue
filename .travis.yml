@@ -34,7 +34,7 @@ install:
   ln -s `which clang++-3.6` ${HOME}/bin/clang++; fi
 - export BOOST_VERSION=${BOOST_VER//./_}
 - export PATH=${HOME}/bin:${PATH}
-- travis_wait ./install-boost.sh
+- travis_wait ./install_boost.sh
 - export BOOST_ROOT=${HOME}/${CC}-boost_${BOOST_VER//./_}
 - "${CXX} --version"
 cache:

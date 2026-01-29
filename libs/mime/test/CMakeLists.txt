@@ -5,12 +5,12 @@ file ( COPY TestMessages DESTINATION ${CMAKE_CURRENT_BINARY_DIR} )
 #(MSVC has /bigobj, MinGW does not)
 if (NOT(${CMAKE_CXX_COMPILER_ID} MATCHES GNU AND ${CMAKE_SYSTEM_NAME} MATCHES "Windows"))
   if ( Boost_FOUND )
-    add_executable ( mime-roundtrip mime-roundtrip.cpp )
-    target_link_libraries ( mime-roundtrip ${Boost_LIBRARIES}
+    add_executable ( mime_roundtrip mime_roundtrip.cpp )
+    target_link_libraries ( mime_roundtrip ${Boost_LIBRARIES}
       ${CMAKE_THREAD_LIBS_INIT})
-    set_target_properties( mime-roundtrip
+    set_target_properties( mime_roundtrip
         PROPERTIES RUNTIME_OUTPUT_DIRECTORY ${CPP-NETLIB_BINARY_DIR}/tests)
-    add_test ( mime-roundtrip ${CPP-NETLIB_BINARY_DIR}/tests/mime-roundtrip )
+    add_test ( mime_roundtrip ${CPP-NETLIB_BINARY_DIR}/tests/mime_roundtrip )
   endif ()
 endif()
 
