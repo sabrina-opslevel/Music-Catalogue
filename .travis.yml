@@ -43,6 +43,12 @@ cache:
 script:
 - pwd
 - sh -x build.sh
+- echo "Verifying hello message implementation..."
+- if [ -f build/example/hello_message ]; then echo "✓ hello_message binary found"; else echo "✗ hello_message binary not found" && exit 1; fi
+- if [ -f build/example/hello_endpoint_server ]; then echo "✓ hello_endpoint_server binary found"; else echo "✗ hello_endpoint_server binary not found" && exit 1; fi
+- echo "Testing hello_message output..."
+- build/example/hello_message | grep -i "hello" || (echo "✗ hello_message does not output hello message" && exit 1)
+- echo "✓ Hello message implementation verified"
 after_failure:
 - cat build/Testing/Temporary/LastTest.log
 addons:

@@ -37,6 +37,8 @@ tags:
       url: http://swagger.io
   - name: user
     description: Operations about user
+  - name: system
+    description: System information and health endpoints
 webhooks:
   # Each webhook needs a name
   newPet:
@@ -52,6 +54,36 @@ webhooks:
         "200":
           description: Return a 200 status to indicate that the data was received successfully
 paths:
+  /hello:
+    get:
+      tags:
+        - system
+      summary: Get standardized hello message
+      description: Returns the standardized hello message with version information
+      operationId: getHello
+      responses:
+        '200':
+          description: successful operation
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: "Hello from cpp-netlib! (version 0.12.0)"
+  /health:
+    get:
+      tags:
+        - system
+      summary: Health check endpoint
+      description: Returns the health status of the service with hello message
+      operationId: getHealth
+      responses:
+        '200':
+          description: successful operation
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: "OK - Hello from cpp-netlib!"
   /pet:
     put:
       summary: Update an existing pet

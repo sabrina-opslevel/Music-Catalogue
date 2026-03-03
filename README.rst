@@ -126,6 +126,54 @@ http://cpp-netlib.org/style-guide.html.
 
 The main "upstream" repository is at http://github.com/cpp-netlib/cpp-netlib.
 
+Hello Message Functionality
+---------------------------
+
+cpp-netlib includes a standardized hello message functionality that can be used
+across your applications. This feature provides:
+
+* A standardized greeting message function
+* Version information reporting
+* Customizable messages via environment variables
+* HTTP endpoints for hello and health check
+* Integration examples and utilities
+
+**Using the Hello Message**
+
+Include the hello header in your code::
+
+    #include <boost/network/hello.hpp>
+
+    // Get the basic hello message
+    std::string msg = boost::network::get_hello_message();
+
+    // Get hello message with version information
+    std::string msg_with_version = boost::network::get_hello_message_with_version();
+
+**Customizing the Hello Message**
+
+You can customize the hello message using the ``CPPNETLIB_HELLO_MESSAGE``
+environment variable::
+
+    export CPPNETLIB_HELLO_MESSAGE="Welcome to my application!"
+    ./your_application
+
+**Examples**
+
+The library includes several examples demonstrating hello functionality:
+
+* ``hello_message`` - Basic hello message example
+* ``hello_endpoint_server`` - HTTP server with /hello and /health endpoints
+
+**API Endpoints**
+
+When using the HTTP server examples, the following endpoints are available:
+
+* ``/hello`` - Returns the hello message with version information
+* ``/health`` - Returns health status with hello message
+
+See the ``.hello.conf`` configuration file for more details.
+
 Contact and Support
 -------------------
 
