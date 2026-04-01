@@ -1,0 +1,6 @@
+# CODEOWNERS file for automated review assignments
+# This file defines default code ownership for all files in the repository
+# See: https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners
+
+# Default owner for all files in the repository
+* @payments-platform
