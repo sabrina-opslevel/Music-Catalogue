@@ -1,0 +1,31 @@
+# CODEOWNERS
+# 
+# This file defines code ownership for the repository.
+# Code owners are automatically requested for review when someone opens a pull request
+# that modifies code they own.
+#
+# For more information about CODEOWNERS, see:
+# https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners
+#
+# Ownership Structure:
+# -------------------
+# The @payments-platform team is designated as the default owner for all files in this repository.
+# This ensures proper code review routing and maintains code quality standards across the
+# payments organization.
+#
+# To modify ownership for specific files or directories, add entries above the default pattern.
+# For example:
+#   /docs/        @payments-platform @documentation-team
+#   *.js          @payments-platform @frontend-team
+#   /config/      @payments-platform @devops-team
+#
+# Pattern Format:
+# --------------
+# - Patterns follow the same rules used in .gitignore files
+# - Use `*` to match any string of characters
+# - Use `?` to match a single character
+# - Use `**` to match any number of directories
+# - Later matches take precedence over earlier ones
+
+# Default ownership - all files are owned by the payments-platform team
+* @payments-platform
